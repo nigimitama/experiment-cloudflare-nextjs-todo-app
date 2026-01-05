@@ -1,0 +1,11 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "experiment-todo"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".open-next"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "experiment-todo"
+database_id = "77792bcd-53aa-4a0c-a90d-a5f343d42b6b"
+migrations_dir = "migrations"
