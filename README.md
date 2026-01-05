@@ -1,47 +1,18 @@
-# OpenNext Starter
+# CLoudflare で Next.js
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+### CLoudflare Workers で Next.js
 
-## Getting Started
+2026 年現在は `@opennextjs/cloudflare`が推奨される
 
-Read the documentation at https://opennext.js.org/cloudflare.
+https://opennext.js.org/cloudflare
 
-## Develop
+### Cloudflare D1
 
-Run the Next.js development server:
+- [Getting started · Cloudflare D1 docs](https://developers.cloudflare.com/d1/get-started/)
+- [Query D1 using Prisma ORM · Cloudflare D1 docs](https://developers.cloudflare.com/d1/tutorials/d1-and-prisma-orm/)
 
-```bash
-npm run dev
-# or similar package manager command
-```
+### 課題
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Cloudflare が Prisma 7 にまだ対応していない？
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Preview
-
-Preview the application locally on the Cloudflare runtime:
-
-```bash
-npm run preview
-# or similar package manager command
-```
-
-## Deploy
-
-Deploy the application to Cloudflare:
-
-```bash
-npm run deploy
-# or similar package manager command
-```
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+[Prisma 7 client fails on Cloudflare Workers: “Wasm code generation disallowed by embedder” · Issue #28657 · prisma/prisma](https://github.com/prisma/prisma/issues/28657)
