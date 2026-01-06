@@ -2,12 +2,13 @@
 
 import { revalidatePath } from 'next/cache'
 import { getPrismaClient } from '@/lib/db'
+import type { Todo } from '@/generated/prisma'
 
 /**
  * Get all todos ordered by creation date (newest first)
  */
-export async function getTodos() {
-  const prisma = getPrismaClient()
+export async function getTodos(): Promise<Todo[]> {
+  const prisma = await getPrismaClient()
 
   const todos = await prisma.todo.findMany({
     orderBy: {
@@ -27,7 +28,7 @@ export async function addTodo(title: string) {
     throw new Error('Title cannot be empty')
   }
 
-  const prisma = getPrismaClient()
+  const prisma = await getPrismaClient()
 
   const todo = await prisma.todo.create({
     data: {
@@ -45,7 +46,7 @@ export async function addTodo(title: string) {
  * @param id - The todo ID
  */
 export async function toggleTodo(id: number) {
-  const prisma = getPrismaClient()
+  const prisma = await getPrismaClient()
 
   // Find current todo
   const currentTodo = await prisma.todo.findUnique({
@@ -73,7 +74,7 @@ export async function toggleTodo(id: number) {
  * @param id - The todo ID
  */
 export async function deleteTodo(id: number) {
-  const prisma = getPrismaClient()
+  const prisma = await getPrismaClient()
 
   await prisma.todo.delete({
     where: { id }

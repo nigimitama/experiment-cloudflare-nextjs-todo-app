@@ -14,7 +14,9 @@
 		"db:generate": "prisma generate",
 		"db:migrate": "prisma migrate dev",
 		"db:studio": "prisma studio",
-		"db:push": "prisma db push"
+		"db:push": "prisma db push",
+		"db:init-local": "wrangler d1 execute todo-app-db --local --file=./prisma/d1-schema.sql",
+		"db:reset-local": "wrangler d1 execute todo-app-db --local --command=\"DROP TABLE IF EXISTS Todo; DROP TABLE IF EXISTS _prisma_migrations;\" && npm run db:init-local"
 	},
 	"dependencies": {
 		"@opennextjs/cloudflare": "^1.14.4",
