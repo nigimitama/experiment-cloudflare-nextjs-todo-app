@@ -3,7 +3,7 @@
 Next.js アプリケーションを Cloudflare Workers にデプロイするサンプル。  
 データベースには Cloudflare D1 を使用。
 
-→ 結果：デプロイできるがうまくいかない。Prisma と D1 の相性が悪そう（[関連 issue](https://github.com/prisma/prisma/issues/28657)）
+→ 結果：ローカルはうまく動いた。デプロイはできるが実行時 500 エラーになる。Prisma と D1 の相性が悪いため（[関連 issue](https://github.com/prisma/prisma/issues/28657)）
 
 ## 技術スタック
 
