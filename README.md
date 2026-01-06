@@ -1,6 +1,9 @@
 # Cloudflare で Next.js
 
-このプロジェクトは、Next.js アプリケーションを Cloudflare Workers にデプロイするサンプルです。データベースには Cloudflare D1 を使用し、Prisma ORM で管理しています。
+Next.js アプリケーションを Cloudflare Workers にデプロイするサンプル。  
+データベースには Cloudflare D1 を使用。
+
+→ 結果：デプロイできるがうまくいかない。Prisma と D1 の相性が悪そう（[関連 issue](https://github.com/prisma/prisma/issues/28657)）
 
 ## 技術スタック
 
